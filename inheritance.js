@@ -72,14 +72,6 @@ console.table(employeeArray);
 
 
 // FUNCTION TO COMPARE SALARIES
-const checkSalary = (employeeList, targetSalary) => {
-    let employeeWithGreaterSalary = [];
-
-    employeeList.forEach((employee) => {
-        if(employee.salary > targetSalary) employeeWithGreaterSalary.push(employee);
-    });
-
-    return employeeWithGreaterSalary;
-}
+const checkSalary = (employeeList, targetSalary) => employeeList.filter((employee) => employee.salary > targetSalary);
 
 console.table(checkSalary(employeeArray, 500000));
